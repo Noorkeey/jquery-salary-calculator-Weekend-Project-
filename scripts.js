@@ -13,6 +13,8 @@ $(document).ready(onReady); // calling document ready function
 function onReady() {
   console.log("jq"); // checking if jquery is source in
   $("#submitBtn").on("click", newNew); // Event listerner
+
+  $(".deleteBtn").on("click", deleteFunc); //descendant selector
 }
 
 // Takes inputs and creates an object constructor, fires append function to DOM
@@ -41,7 +43,30 @@ function newNew() {
   annualSalaryCost = +Number(newEmployee.annualSalary); // totaling costs from salaries
 
   monthlySalaryCost += Math.round(annualSalaryCost / 12); // total monthly cost of salaries (annual cost/12)
-  $("#totalMonthlyIn").text(monthlySalaryCost);
+  //   $("#totalMonthlyIn").text(monthlySalaryCost);
+
+  if (monthlySalaryCost >= 20000) {
+    // a conditiond that will change the background color to Red
+    $("#totalMonthlyIn").toggleClass("redColor");
+  }
+
+  $("#totalMonthlyIn").html(monthlySalaryCost);
+}
+
+// Object Constructor: to populate stored employee data for each field.
+function Employee(
+  firstNameIn,
+  lastNameIn,
+  idNumberIn,
+  jobTitleIn,
+  annualSalaryIn
+) {
+  this.firstName = firstNameIn;
+  this.lastName = lastNameIn;
+  this.idNumber = idNumberIn;
+  this.jobTitle = jobTitleIn;
+  this.annualSalary = annualSalaryIn;
+  employees.push(this);
 }
 
 // create function that diplays on the Dom
@@ -75,20 +100,4 @@ function deleteFunc() {
   $(this).parent().parent().remove(); // this = the specific delete btn that was clicked
   // .parent() = the <td>
   // .remove() removes that element
-}
-
-// Object Constructor: to populate stored employee data for each field.
-function Employee(
-  firstNameIn,
-  lastNameIn,
-  idNumberIn,
-  jobTitleIn,
-  annualSalaryIn
-) {
-  this.firstName = firstNameIn;
-  this.lastName = lastNameIn;
-  this.idNumber = idNumberIn;
-  this.jobTitle = jobTitleIn;
-  this.annualSalary = annualSalaryIn;
-  employees.push(this);
 }

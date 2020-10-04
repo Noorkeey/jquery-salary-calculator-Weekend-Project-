@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="jquery.js"></script>
+    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>jquery Salary Calculator</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Salary Calculator</h1>
+    </header>
+    <main>
+      <h4>Add Employee</h4>
+      <section id="employeeInfor">
+        <input
+          class="input"
+          type="text"
+          name="First Name"
+          placeholder="First Name"
+          id="firstNameIn"
+        />
+        <input
+          class="input"
+          type="text"
+          placeholder="Last Name"
+          id="lastNameIn"
+        />
+        <input class="input" type="number" placeholder="ID" id="idNumberIn" />
+        <input
+          class="input"
+          type="text"
+          placeholder="Job Title"
+          id="jobTitleIn"
+        />
+        <input
+          class="input"
+          type="number"
+          placeholder="Annual Salary"
+          id="annualSalaryIn"
+        />
+        <button id="submitBtn">Submit</button>
+      </section>
+      <div>
+        <table id="table">
+          <thead>
+            <th>Fist Name:</th>
+            <th>last Name:</th>
+            <th>Id Number:</th>
+            <th>Job Title:</th>
+            <th>Annual Salary:</th>
+          </thead>
+
+          <tbody id="displayInformation"></tbody>
+        </table>
+      </div>
+      <section id="costSummary">
+        <h2>Total Monthly:</h2>
+        <p>$<span id="totalMonthlyIn"></span></p>
+      </section>
+
+      <section id="showEmployeeInformationIn"></section>
+    </main>
+  </body>
+</html>

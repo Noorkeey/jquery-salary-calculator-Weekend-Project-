@@ -1,0 +1,31 @@
+body {
+  font-family: italic;
+  background-color: lightblue;
+}
+.pinkColor {
+  background-color: red;
+}
+main {
+  font-family: Avant Garde, sans-serif;
+  margin-left: 5%;
+}
+
+h1 {
+  text-align: center;
+  background-color: grey;
+  color: white;
+  font-family: italic;
+  margin-left: 1%;
+}
+
+h2 {
+  text-align: center;
+  color: black;
+  font-family: italic;
+}
+
+p {
+  text-align: center;
+  color: black;
+  font-family: italic;
+}

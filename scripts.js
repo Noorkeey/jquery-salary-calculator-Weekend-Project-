@@ -14,7 +14,7 @@ function onReady() {
   console.log("jq"); // checking if jquery is source in
   $("#submitBtn").on("click", newNew); // Event listerner
 
-  $(".deleteBtn").on("click", deleteFunc); //descendant selector
+  //   $(".deleteBtn").on("click", deleteFunc); //descendant selector
 }
 
 // Takes inputs and creates an object constructor, fires append function to DOM
